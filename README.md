@@ -230,7 +230,7 @@ The system follows **3 core rules** for every signal decision:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/nexusflow-ai.git
+git clone https://github.com/Ayushi2006Sahu/TrafficManagement.git
 
 # Navigate to project directory
 cd nexusflow-ai
