@@ -161,7 +161,7 @@ Traffic congestion at road junctions is a major issue in modern cities. Most tra
 ## 📸 Screenshots
 
 ### 🏠 Landing Page
-![Landing Page](images/Screenshot 2026-05-10 183154.png)
+![Landing Page](LandingPage.png)
 
 - Project overview with feature highlights
 - How It Works — 3 step process
@@ -183,7 +183,7 @@ Traffic congestion at road junctions is a major issue in modern cities. Most tra
 - Supports 4 junctions simultaneously
 
 ### 🤖 AI Analysis Page
-![Analysis](images/Screenshot 2026-05-10 184942.png)
+![Analysis](Analysis.png)
 - Footage analysis history (Pending / Completed)
 - Real-time analysis results
 - Vehicle type breakdown with donut chart
@@ -191,7 +191,7 @@ Traffic congestion at road junctions is a major issue in modern cities. Most tra
 - AI recommendation text
 
 ### 🚦 Junction Control Panel
-![Junction Control](images/Screenshot 2026-05-10 185031.png)
+![Junction Control](JunctionControl.png)
 - 4-lane real-time signal view
 - Live signal timer countdown
 - Traffic density per lane
@@ -201,7 +201,7 @@ Traffic congestion at road junctions is a major issue in modern cities. Most tra
 - Signal Time Allocation bar chart
 
 ### 📈 Analytics Page
-![Analytics](images/Screenshot 2026-05-10 185106.png)
+![Analytics](AnalyticsPage.png)
 - Congestion Score Over Time graph
 - Vehicle Composition per session
 - Density Level Distribution (Low/Medium/High/Critical)
