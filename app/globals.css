@@ -1,0 +1,234 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    background: #020617;
+    color: #f1f5f9;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0f172a;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #06b6d4;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #22d3ee;
+  }
+
+  ::selection {
+    background: rgba(6,182,212,0.3);
+    color: #fff;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.05);
+  }
+
+  .glass-card-hover {
+    @apply glass-card transition-all duration-300;
+  }
+  .glass-card-hover:hover {
+    @apply border-cyan-500/30;
+    background-color: rgba(255,255,255,0.08);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4), 0 0 0 1px rgba(6,182,212,0.2), inset 0 1px 0 rgba(255,255,255,0.05);
+  }
+
+  .neon-border {
+    border: 1px solid rgba(6,182,212,0.4);
+    box-shadow: 0 0 15px rgba(6,182,212,0.15), inset 0 0 15px rgba(6,182,212,0.05);
+  }
+
+  .neon-text {
+    color: #06b6d4;
+    text-shadow: 0 0 10px rgba(6,182,212,0.5), 0 0 20px rgba(6,182,212,0.3);
+  }
+
+  .btn-primary {
+    @apply relative px-6 py-3 bg-cyan-500 text-white font-semibold rounded-xl overflow-hidden
+           transition-all duration-300 hover:bg-cyan-400 hover:shadow-[0_0_25px_rgba(6,182,212,0.5)]
+           active:scale-95 focus:outline-none focus:ring-2 focus:ring-cyan-500/50;
+  }
+
+  .btn-secondary {
+    @apply relative px-6 py-3 bg-white/5 border border-white/10 text-white font-semibold rounded-xl
+           transition-all duration-300 hover:bg-white/10 hover:border-cyan-500/40
+           active:scale-95 focus:outline-none focus:ring-2 focus:ring-cyan-500/30;
+  }
+
+  .btn-danger {
+    @apply relative px-6 py-3 bg-red-500/20 border border-red-500/40 text-red-400 font-semibold rounded-xl
+           transition-all duration-300 hover:bg-red-500/30 hover:shadow-[0_0_20px_rgba(239,68,68,0.3)]
+           active:scale-95 focus:outline-none;
+  }
+
+  .stat-card {
+    @apply glass-card p-5 relative overflow-hidden;
+  }
+  .stat-card::before {
+    content: '';
+    @apply absolute inset-0 opacity-0 transition-opacity duration-300;
+    background: radial-gradient(circle at 50% 0%, rgba(6,182,212,0.08), transparent 70%);
+  }
+  .stat-card:hover::before {
+    @apply opacity-100;
+  }
+
+  .sidebar-item {
+    @apply flex items-center gap-3 px-4 py-3 rounded-xl text-gray-400 text-sm font-medium
+           transition-all duration-200 hover:text-white cursor-pointer;
+  }
+  .sidebar-item:hover {
+    background-color: rgba(255,255,255,0.08);
+  }
+
+  .sidebar-item-active {
+    @apply sidebar-item text-cyan-400 bg-cyan-500/10 border border-cyan-500/20;
+    box-shadow: inset 0 0 20px rgba(6,182,212,0.05);
+  }
+
+  .input-field {
+    @apply w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500
+           focus:outline-none focus:border-cyan-500/60 focus:ring-1 focus:ring-cyan-500/30
+           transition-all duration-200;
+  }
+  .input-field:focus {
+    background-color: rgba(255,255,255,0.08);
+  }
+
+  .badge-low {
+    @apply px-2 py-0.5 rounded-full text-xs font-medium bg-emerald-500/20 text-emerald-400 border border-emerald-500/30;
+  }
+  .badge-medium {
+    @apply px-2 py-0.5 rounded-full text-xs font-medium bg-yellow-500/20 text-yellow-400 border border-yellow-500/30;
+  }
+  .badge-high {
+    @apply px-2 py-0.5 rounded-full text-xs font-medium bg-orange-500/20 text-orange-400 border border-orange-500/30;
+  }
+  .badge-critical {
+    @apply px-2 py-0.5 rounded-full text-xs font-medium bg-red-500/20 text-red-400 border border-red-500/30;
+  }
+
+  .section-heading {
+    @apply text-xl font-bold text-white flex items-center gap-2;
+  }
+
+  .page-grid {
+    background-image: linear-gradient(rgba(6,182,212,0.03) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(6,182,212,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, #06b6d4, #818cf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-green {
+    background: linear-gradient(135deg, #34d399, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glow-cyan {
+    box-shadow: 0 0 20px rgba(6,182,212,0.4);
+  }
+
+  .glow-green {
+    box-shadow: 0 0 20px rgba(52,211,153,0.4);
+  }
+
+  .glow-red {
+    box-shadow: 0 0 20px rgba(239,68,68,0.5);
+  }
+
+  .glow-purple {
+    box-shadow: 0 0 20px rgba(139,92,246,0.4);
+  }
+
+  .animate-glow-pulse {
+    animation: glowPulse 2s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes glowPulse {
+  0% { box-shadow: 0 0 5px rgba(6,182,212,0.3); }
+  100% { box-shadow: 0 0 25px rgba(6,182,212,0.7), 0 0 50px rgba(6,182,212,0.3); }
+}
+
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+.scanline::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(6,182,212,0.15), transparent);
+  animation: scanline 8s linear infinite;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Traffic light animation */
+.traffic-light-glow-green {
+  box-shadow: 0 0 15px #22c55e, 0 0 30px rgba(34,197,94,0.5);
+}
+.traffic-light-glow-yellow {
+  box-shadow: 0 0 15px #eab308, 0 0 30px rgba(234,179,8,0.5);
+}
+.traffic-light-glow-red {
+  box-shadow: 0 0 15px #ef4444, 0 0 30px rgba(239,68,68,0.5);
+}
+
+/* Chart tooltip */
+.recharts-tooltip-wrapper .recharts-default-tooltip {
+  background: rgba(15, 23, 42, 0.95) !important;
+  border: 1px solid rgba(6,182,212,0.3) !important;
+  border-radius: 12px !important;
+  backdrop-filter: blur(10px);
+}
+
+/* Loading shimmer */
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, rgba(255,255,255,0.03) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.03) 75%);
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite;
+}
