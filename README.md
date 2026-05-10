@@ -177,13 +177,13 @@ Traffic congestion at road junctions is a major issue in modern cities. Most tra
 - Vehicle type breakdown chart
 
 ### 📤 Upload Footage
-![Upload Page](images/Screenshot 2026-05-10 184901.png)
+![Upload Page](UPloadPage.png)
 - Select target junction
 - Drag & drop image/video upload
 - Supports 4 junctions simultaneously
 
 ### 🤖 AI Analysis Page
-![Analysis](Analysis.png)
+![Analysis](AnalysisPage.png)
 - Footage analysis history (Pending / Completed)
 - Real-time analysis results
 - Vehicle type breakdown with donut chart
