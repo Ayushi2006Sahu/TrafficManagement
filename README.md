@@ -168,7 +168,7 @@ Traffic congestion at road junctions is a major issue in modern cities. Most tra
 - Live system statistics
 
 ### 📊 Traffic Command Center (Dashboard)
-![Dashboard](images/Screenshot 2026-05-10 184806.png)
+![Dashboard](DashboardPage.png)
 - Live vehicle count across all sessions
 - Average congestion score
 - Critical junction alerts
